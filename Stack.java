@@ -80,7 +80,7 @@ public class Stack<T>{
     //System.out.println(popNum);
     t.push("f");
     t.push("g"); 
-        System.out.println(t.toString());
-        System.out.println(t.search(t.peek()));    
+    System.out.println(t.toString());
+    System.out.println(t.search(t.peek()));    
   }
 }
