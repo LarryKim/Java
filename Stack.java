@@ -17,7 +17,7 @@ public class Stack<T>{
 
   public T pop() {
     T elem = null;
-    if(stackPoint >= 0) {
+    if(!empty()) {
       elem = list.get(stackPoint);
       list.remove(stackPoint);
       stackPoint--;
@@ -27,7 +27,7 @@ public class Stack<T>{
 
   public T peek() {
     T elem = null;
-    if(stackPoint >= 0) {
+    if(!empty()) {
       elem = list.get(stackPoint);
     }
     return elem;
@@ -57,16 +57,16 @@ public class Stack<T>{
   }
 
   public static void main(String[] args) {
-    Stack<Integer> t = new Stack<Integer> ();
+    Stack<String> t = new Stack<String> ();
     //System.out.println(t.toString());
-    t.push(1);
-    t.push(2);
-    t.push(3);
+    t.push("a");
+    t.push("b");
+    t.push("c");
     System.out.println(t.toString());
-    int popNum = t.pop();
+    String popNum = t.pop();
     System.out.println(popNum);
-    t.push(4);
-    t.push(5); 
+    t.push("d");
+    t.push("e"); 
     System.out.println(t.toString());
     popNum = t.pop();
     System.out.println(popNum);
@@ -78,9 +78,9 @@ public class Stack<T>{
     System.out.println(popNum);
     //popNum = t.pop();
     //System.out.println(popNum);
-    t.push(6);
-    t.push(7); 
-    System.out.println(t.toString());
-    System.out.println(t.search(t.peek()));    
+    t.push("f");
+    t.push("g"); 
+        System.out.println(t.toString());
+        System.out.println(t.search(t.peek()));    
   }
 }
